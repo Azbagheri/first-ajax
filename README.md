@@ -7,3 +7,6 @@
 
 2. How many milliseconds did it take your browser to complete it?
   78ms
+
+3. What HTTP status code did the server return? What does that mean?
+    status code: 200; it means the HTTP request was successful.
