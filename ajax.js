@@ -10,12 +10,15 @@ $(document).ready(function() {
 
   $('#step3456 button').on('click', function(){
     $.ajax({
-      url: 'http://first-ajax-api.herokuapp.com/ping',
+      url: 'http://first-ajax-api.herokuapp.com/pong',
       method: 'GET',
       dataType: 'text'
     }).done(function(responseData){
       console.log(responseData);
       $('#step3456').append('<p>' + responseData + '</p>');
+    }).fail(function(){
+      console.log("failed");
+      $('#step3456').append('<p> Sorry, we try harder next time!</p>');
     });
   });
 
