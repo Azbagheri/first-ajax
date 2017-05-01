@@ -10,3 +10,6 @@
 
 3. What HTTP status code did the server return? What does that mean?
     status code: 200; it means the HTTP request was successful.
+
+4. Look at the "Initiator" and "Type" columns. Was this an xhr/JavaScript/AJAX request or a normal browser request?
+    It's a normal browser request.
