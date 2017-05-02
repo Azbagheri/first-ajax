@@ -36,9 +36,20 @@ $(document).ready(function() {
     $.ajax({
       url: 'http://first-ajax-api.herokuapp.com/time',
       method: 'GET',
+      data: {timeZone:'Europe/Sofia'},
       dataType: 'text'
     }).done(function(responseData){
       $('#step8').append('<p>' + responseData + '</p>');
+    });
+  });
+
+  $('#step9 button').on('click', function(){
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/a_car',
+      method: 'GET',
+      dataType: 'html'
+    }).done(function(responseData){
+      $('#step9').append('<ul>' + responseData + '</ ul>');
     });
   });
 });

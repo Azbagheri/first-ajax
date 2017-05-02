@@ -18,3 +18,8 @@
   5. What are the values in the "Method" and "Status" columns? Compare these values to Step 0. The method is get and the status is 200. This part is the same as the step 0.
 
   6. What are the values in the "Type" and "Initiator" columns? Compare these values to Step 0. type is xhr and the initiator is jquery.min.js, because we're using jquery to send an ajax request, the initiator is jquery.min.js. However, in step 0, the initiator was other and the type is document because we just typed the url in the browser and the browser sent the request.
+
+#Step 9
+Investigate the Request and Response "Headers" in your Network Tab. What is the 'Accepts' of the Request, and the 'Content-Type' of the response?
+ In the response header: Content-Type:text/html; charset=utf-8
+ In the request header: Accept:text/html, */*; q=0.01
