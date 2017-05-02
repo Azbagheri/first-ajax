@@ -30,7 +30,13 @@ $(document).ready(function() {
       dataType: 'text'
     }).done(function(responseData){
       $('#step7').append('<p>' + responseData + '</p>');
+    }).fail(function(){
+      console.log('Request failed');
+      $('#step3456').append('<p> Sorry, we try harder next time!</p>');
+    }).always(function(){
+      console.log('Hey the request finished!');
     });
+
   });
   $('#step8 button').on('click', function(){
     $.ajax({
@@ -40,6 +46,11 @@ $(document).ready(function() {
       dataType: 'text'
     }).done(function(responseData){
       $('#step8').append('<p>' + responseData + '</p>');
+    }).fail(function(){
+      console.log('Request failed');
+      $('#step3456').append('<p> Sorry, we try harder next time!</p>');
+    }).always(function(){
+      console.log('Hey the request finished!');
     });
   });
 
@@ -50,6 +61,11 @@ $(document).ready(function() {
       dataType: 'html'
     }).done(function(responseData){
       $('#step9').append('<ul>' + responseData + '</ ul>');
+    }).fail(function(){
+      console.log('Request failed');
+      $('#step3456').append('<p> Sorry, we try harder next time!</p>');
+    }).always(function(){
+      console.log('Hey the request finished!');
     });
   });
 });
