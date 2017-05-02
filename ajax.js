@@ -32,4 +32,13 @@ $(document).ready(function() {
       $('#step7').append('<p>' + responseData + '</p>');
     });
   });
+  $('#step8 button').on('click', function(){
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/time',
+      method: 'GET',
+      dataType: 'text'
+    }).done(function(responseData){
+      $('#step8').append('<p>' + responseData + '</p>');
+    });
+  });
 });
