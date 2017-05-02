@@ -7,7 +7,6 @@ $(document).ready(function() {
       dataType: 'text'
     });
   });
-
   $('#step3456 button').on('click', function(){
     $.ajax({
       url: 'http://first-ajax-api.herokuapp.com/pong',
@@ -19,6 +18,8 @@ $(document).ready(function() {
     }).fail(function(){
       console.log("failed");
       $('#step3456').append('<p> Sorry, we try harder next time!</p>');
+    }).always(function(){
+      console.log('Hey the request finished!');
     });
   });
 
